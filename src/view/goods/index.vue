@@ -63,6 +63,8 @@ import {
   GoodsActionButton
 } from 'vant';
 
+import { _searchArticle } from '@/apis/example'
+
 export default {
   components: {
     [Tag.name]: Tag,
@@ -104,6 +106,10 @@ export default {
     sorry() {
       Toast('暂无后续逻辑~');
     }
+  },
+
+  async mounted () {
+    await _searchArticle()
   }
 };
 </script>
